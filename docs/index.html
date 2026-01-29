@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<title>Idle Champions Server Calls</title>
 	<meta charset="UTF-8">
@@ -24,70 +23,59 @@
 		<div class="menuPopup" id="settingsMenu">
 			<div class="f fr w100 p5">
 				<div class="f falc fje mr2" style="width:40%"><label for="userId">Account Name:</label></div>
-				<div class="f falc fjs ml2" style="width:60%"><input type="input" name="userName" id="userName"
-						placeholder="Required"></div>
+				<div class="f falc fjs ml2" style="width:60%"><input type="input" name="userName" id="userName" placeholder="Required"></div>
 			</div>
 			<div class="f fr w100 p5">
 				<div class="f falc fje mr2" style="width:40%"><label for="userId">User ID:</label></div>
-				<div class="f falc fjs ml2" style="width:60%"><input type="input" name="userId" id="userId"
-						placeholder="Required"></div>
+				<div class="f falc fjs ml2" style="width:60%"><input type="input" name="userId" id="userId" placeholder="Required"></div>
 			</div>
 			<div class="f fr w100 p5">
 				<div class="f falc fje mr2" style="width:40%"><label for="userHash">User Hash:</label></div>
-				<div class="f falc fjs ml2" style="width:60%"><input type="input" name="userHash" id="userHash"
-						placeholder="Required"></div>
+				<div class="f falc fjs ml2" style="width:60%"><input type="input" name="userHash" id="userHash" placeholder="Required"></div>
 			</div>
-			<div class="f fr w100 p5">
-				<div class="f falc fje mr2" style="width:50%"><input type="button" onClick="saveUserData()"
-						id="settingsMenuButtonSave" value="Save"></div>
-				<div class="f falc fjs ml2" style="width:50%"><input type="button" onClick="settingsToggle()"
-						id="settingsMenuButtonClose" value="Close" hidden></div>
+			<div class="f fr w100 p5">	
+				<div class="f falc fje mr2" style="width:50%"><input type="button" onClick="saveUserData()" id="settingsMenuButtonSave" value="Save"></div>
+				<div class="f falc fjs ml2" style="width:50%"><input type="button" onClick="settingsToggle()" id="settingsMenuButtonClose" value="Close" hidden></div>
 			</div>
 			<div class="f fr w100 p5">
 				&nbsp;
 			</div>
-			<div class="f fr w100 p5">
+			<div class="f fr w100 p5">	
 				<div class="f falc fjs ml2" style="width:100%">Accounts:</div>
 			</div>
-			<div class="f fr w100 p5">
+			<div class="f fr w100 p5">	
 				<div class="f falc fjc ml2" style="width:100%">
 					<select id="settingsMenuAccountsList">
 						<option value="" selected>-</option>
 					</select>
 				</div>
 			</div>
-			<div class="f fr w100 p5">
-				<div class="f falc fje mr2" style="width:50%"><input type="button" onClick="loadUserAccount()"
-						id="settingsMenuButtonLoadAccount" value="Load"></div>
-				<div class="f falc fjs ml2" style="width:50%"><input type="button" onClick="deleteUserAccount()"
-						id="settingsMenuButtonDeleteAccount" value="Delete"></div>
+			<div class="f fr w100 p5">	
+				<div class="f falc fje mr2" style="width:50%"><input type="button" onClick="loadUserAccount()" id="settingsMenuButtonLoadAccount" value="Load"></div>
+				<div class="f falc fjs ml2" style="width:50%"><input type="button" onClick="deleteUserAccount()" id="settingsMenuButtonDeleteAccount" value="Delete"></div>
 			</div>
 			<div class="f fr w100 p5">
 				&nbsp;
 			</div>
-			<div class="f fr w100 p5">
+			<div class="f fr w100 p5">	
 				<div class="f falc fjs ml2" style="width:100%">Support URL:</div>
 			</div>
-			<div class="f fr w100 p5">
-				<div class="f falc fjc mb2" style="width:100%"><input type="input" name="supportUrl" id="supportUrl"
-						style="width:100%"></div>
+			<div class="f fr w100 p5">	
+				<div class="f falc fjc mb2" style="width:100%"><input type="input" name="supportUrl" id="supportUrl" style="width:100%"></div>
 			</div>
-			<div class="f fr w100 p5">
-				<div class="f falc fjc mb2" style="width:100%"><input type="button" onClick="supportUrlSaveData()"
-						id="supportUrlMenuButton" value=" Get User Data From Support Url " style="width:100%"></div>
+			<div class="f fr w100 p5">	
+				<div class="f falc fjc mb2" style="width:100%"><input type="button" onClick="supportUrlSaveData()" id="supportUrlMenuButton" value=" Get User Data From Support Url " style="width:100%"></div>
 			</div>
 			<div class="f fr w100 p5">
 				&nbsp;
 			</div>
-			<div class="f fr w100 p5">
+			<div class="f fr w100 p5">	
 				<div class="f falc fjs ml2" style="width:100%">Options:</div>
 			</div>
 			<div class="f fr w100 p5">
-				<div class="f falc fjs ml2" style="width:40%"><label for="settingsMenuNumberFormat">Number
-						Format:</label></div>
+				<div class="f falc fjs ml2" style="width:40%"><label for="settingsMenuNumberFormat">Number Format:</label></div>
 				<div class="f falc fje mr2" style="width:60%">
-					<select id="settingsNumberFormat" onInput="changeCurrentNumberFormat(this.value)"
-						style="width:95%;font-family:monospace">
+					<select id="settingsNumberFormat" onInput="changeCurrentNumberFormat(this.value)" style="width:95%;font-family:monospace">
 						<option value="" selected>-</option>
 					</select>
 				</div>
@@ -97,46 +85,39 @@
 
 	<div class="settingsContainer">
 		<div class="setting" id="settingsIcon">
-			<svg onClick="settingsToggle()" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48"
-				viewBox="0 0 64 64">
-				<path
-					d="M52.339,28.023C53.299,28.188,54,29.02,54,29.994v4.012c0,0.974-0.701,1.806-1.661,1.971l-3.464,0.596	c-0.395,1.461-0.969,2.846-1.707,4.129l2.026,2.868c0.562,0.795,0.469,1.88-0.219,2.568l-2.837,2.837	c-0.689,0.689-1.773,0.781-2.568,0.219l-2.868-2.025c-1.283,0.738-2.668,1.311-4.129,1.707l-0.596,3.464	C35.812,53.299,34.98,54,34.006,54h-4.012c-0.974,0-1.806-0.701-1.971-1.661l-0.596-3.464c-1.461-0.395-2.846-0.969-4.129-1.707	l-2.868,2.025c-0.795,0.562-1.88,0.469-2.568-0.219l-2.837-2.837c-0.688-0.689-0.781-1.773-0.219-2.568l2.026-2.868	c-0.738-1.283-1.312-2.668-1.707-4.129l-3.464-0.596C10.701,35.812,10,34.98,10,34.006v-4.012c0-0.974,0.701-1.806,1.661-1.971	l3.464-0.596c0.395-1.461,0.969-2.846,1.707-4.129l-2.026-2.868c-0.562-0.795-0.469-1.88,0.219-2.568l2.837-2.837	c0.689-0.688,1.773-0.781,2.568-0.219l2.868,2.026c1.283-0.738,2.668-1.311,4.129-1.707l0.596-3.464	C28.188,10.701,29.02,10,29.994,10h4.012c0.974,0,1.806,0.701,1.971,1.661l0.596,3.464c1.461,0.395,2.846,0.969,4.129,1.707	l2.868-2.026c0.795-0.562,1.88-0.469,2.568,0.219l2.837,2.837c0.688,0.688,0.781,1.773,0.219,2.568l-2.026,2.868	c0.738,1.283,1.312,2.668,1.707,4.129L52.339,28.023z M32,40c4.418,0,8-3.582,8-8s-3.582-8-8-8s-8,3.582-8,8S27.582,40,32,40z">
-				</path>
+			<svg onClick="settingsToggle()" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 64 64">
+				<path d="M52.339,28.023C53.299,28.188,54,29.02,54,29.994v4.012c0,0.974-0.701,1.806-1.661,1.971l-3.464,0.596	c-0.395,1.461-0.969,2.846-1.707,4.129l2.026,2.868c0.562,0.795,0.469,1.88-0.219,2.568l-2.837,2.837	c-0.689,0.689-1.773,0.781-2.568,0.219l-2.868-2.025c-1.283,0.738-2.668,1.311-4.129,1.707l-0.596,3.464	C35.812,53.299,34.98,54,34.006,54h-4.012c-0.974,0-1.806-0.701-1.971-1.661l-0.596-3.464c-1.461-0.395-2.846-0.969-4.129-1.707	l-2.868,2.025c-0.795,0.562-1.88,0.469-2.568-0.219l-2.837-2.837c-0.688-0.689-0.781-1.773-0.219-2.568l2.026-2.868	c-0.738-1.283-1.312-2.668-1.707-4.129l-3.464-0.596C10.701,35.812,10,34.98,10,34.006v-4.012c0-0.974,0.701-1.806,1.661-1.971	l3.464-0.596c0.395-1.461,0.969-2.846,1.707-4.129l-2.026-2.868c-0.562-0.795-0.469-1.88,0.219-2.568l2.837-2.837	c0.689-0.688,1.773-0.781,2.568-0.219l2.868,2.026c1.283-0.738,2.668-1.311,4.129-1.707l0.596-3.464	C28.188,10.701,29.02,10,29.994,10h4.012c0.974,0,1.806,0.701,1.971,1.661l0.596,3.464c1.461,0.395,2.846,0.969,4.129,1.707	l2.868-2.026c0.795-0.562,1.88-0.469,2.568,0.219l2.837,2.837c0.688,0.688,0.781,1.773,0.219,2.568l-2.026,2.868	c0.738,1.283,1.312,2.668,1.707,4.129L52.339,28.023z M32,40c4.418,0,8-3.582,8-8s-3.582-8-8-8s-8,3.582-8,8S27.582,40,32,40z"></path>
 			</svg>
 		</div>
 		<label for="settingsIcon" id="settingsIconName" style="padding-right:5px">&nbsp;</label>
 	</div>
-
+	
 	<div class="versioningContainer" id="versioningContainer">
 		<div class="updateContainer" id="updateContainer" style="display:none">
 			<div class="update" id="updateIcon">
-				<svg onClick="window.location.reload(true)" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-					width="44" height="44" viewBox="0 0 20 20">
-					<path
-						d="M10.2 3.28c3.53 0 6.43 2.61 6.92 6h2.08l-3.5 4-3.5-4h2.32c-.45-1.97-2.21-3.45-4.32-3.45-1.45 0-2.73.71-3.54 1.78L4.95 5.66C6.23 4.2 8.11 3.28 10.2 3.28zm-.4 13.44c-3.52 0-6.43-2.61-6.92-6H.8l3.5-4c1.17 1.33 2.33 2.67 3.5 4H5.48c.45 1.97 2.21 3.45 4.32 3.45 1.45 0 2.73-.71 3.54-1.78l1.71 1.95c-1.28 1.46-3.15 2.38-5.25 2.38z" />
+				<svg onClick="window.location.reload(true)" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="44" height="44" viewBox="0 0 20 20" >
+					<path d="M10.2 3.28c3.53 0 6.43 2.61 6.92 6h2.08l-3.5 4-3.5-4h2.32c-.45-1.97-2.21-3.45-4.32-3.45-1.45 0-2.73.71-3.54 1.78L4.95 5.66C6.23 4.2 8.11 3.28 10.2 3.28zm-.4 13.44c-3.52 0-6.43-2.61-6.92-6H.8l3.5-4c1.17 1.33 2.33 2.67 3.5 4H5.48c.45 1.97 2.21 3.45 4.32 3.45 1.45 0 2.73-.71 3.54-1.78l1.71 1.95c-1.28 1.46-3.15 2.38-5.25 2.38z"/>
 				</svg>
 			</div>
-			<label for="updateIcon" style="padding:5px 0 0 5px;cursor:pointer"
-				onClick="window.location.reload(true)">Refresh for Updates!</label>
+			<label for="updateIcon" style="padding:5px 0 0 5px;cursor:pointer" onClick="window.location.reload(true)">Refresh for Updates!</label>
 		</div>
 		<div class="changelogContainer" id="changelogContainer">
 			<a href="https://github.com/Emmotes/ic_servercalls/commits/main/" target="_blank">View the Changelog</a>
 		</div>
 	</div>
-
+	
 	<div id="disabledUntilInit" style="position:absolute;top:50px;left:50px;width:calc(100% - 435px)">
 		Loading...
 	</div>
-
+	
 	<div id="disabledUntilData" style="position:absolute;top:50px;left:50px;width:calc(100% - 435px)" hidden>
 		This page will populate once you've input your user data.
 	</div>
-
+	
 	<div class="tabsContainer" id="tabsContainer" hidden>
 		<div class="tabs">
 			<!-- START: Delete Formations Tab -->
-			<input onClick="setHash('formationsTab')" type="radio" class="tabsRadio" name="serverTabs"
-				id="formationsTab" checked>
+			<input onClick="setHash('formationsTab')" type="radio" class="tabsRadio" name="serverTabs" id="formationsTab" checked>
 			<label for="formationsTab" class="tabsLabel">Delete Formations</label>
 			<div class="tabsContent">
 				<span class="f fr w100 p5">
@@ -146,9 +127,7 @@
 				</span>
 				<span class="f fr w100 p5">
 					<span class="f fc fals fjs ml2" style="width:100%">
-						<p>This page will let you pick and choose any formation saves you have and delete them. The aim
-							of this is to lower the amount of data you need to download every time the game restarts or
-							the modron resets - since the server pulls ALL of your formation saves every time.</p>
+						<p>This page will let you pick and choose any formation saves you have and delete them. The aim of this is to lower the amount of data you need to download every time the game restarts or the modron resets - since the server pulls ALL of your formation saves every time.</p>
 					</span>
 				</span>
 				<span class="f fr w100 p5">
@@ -156,8 +135,7 @@
 				</span>
 				<span class="f fr w100 p5" style="height:34px;">
 					<span class="f falc fje mr2" style="width:50%;">
-						<input type="button" onClick="df_pullFormationSaves()" name="formationsPullButton"
-							id="formationsPullButton" value="Pull Formation Save Data" style="min-width:175px">
+						<input type="button" onClick="df_pullFormationSaves()" name="formationsPullButton" id="formationsPullButton" value="Pull Formation Save Data" style="min-width:175px">
 						<span id="formationsPullButtonDisabled" style="font-size:0.9em" hidden>&nbsp;</span>
 					</span>
 				</span>
@@ -189,13 +167,8 @@
 				</span>
 				<span class="f fr w100 p5">
 					<span class="f fc fals fjs ml2" style="width:100%">
-						<p>This page will let you buy any gem feat that is available that you don't already own. Mainly
-							it's for people who want to buy every gem feat in the game regardless of what they do -
-							which is why so little information is given.</p>
-						<p><em>Note: Any feats bought this way will not count to the three achievements that require
-								purchasing feats with gems: <code>Gems For Power</code> (1 feat), <code>Gem Sink</code>
-								(20 feats) and <code>Purchasing Power</code> (80 feats). They must be completed by
-								buying the feats in-game.</em></p>
+						<p>This page will let you buy any gem feat that is available that you don't already own. Mainly it's for people who want to buy every gem feat in the game regardless of what they do - which is why so little information is given.</p>
+						<p><em>Note: Any feats bought this way will not count to the three achievements that require purchasing feats with gems: <code>Gems For Power</code> (1 feat), <code>Gem Sink</code> (20 feats) and <code>Purchasing Power</code> (80 feats). They must be completed by buying the feats in-game.</em></p>
 					</span>
 				</span>
 				<span class="f fr w100 p5">
@@ -203,8 +176,7 @@
 				</span>
 				<span class="f fr w100 p5" style="height:34px;">
 					<span class="f falc fje mr2" style="width:50%;">
-						<input type="button" onClick="bf_pullFeatsData()" name="featsPullButton" id="featsPullButton"
-							value="Pull Feat Data" style="min-width:175px">
+						<input type="button" onClick="bf_pullFeatsData()" name="featsPullButton" id="featsPullButton" value="Pull Feat Data" style="min-width:175px">
 						<span id="featsPullButtonDisabled" style="font-size:0.9em" hidden>&nbsp;</span>
 					</span>
 				</span>
@@ -236,14 +208,11 @@
 				</span>
 				<span class="f fr w100 p5">
 					<span class="f falc fjs ml2" style="width:100%;position:relative">
-						This page will let you buy Silver or Gold chests for gems as well as chest packs for event
-						tokens for champions you have flexed.
-						<span class="f fc"
-							style="position:absolute;top:-80px;right:0;align-items:center;text-align:center;z-index:1">
+						This page will let you buy Silver or Gold chests for gems as well as chest packs for event tokens for champions you have flexed.
+						<span class="f fc" style="position:absolute;top:-80px;right:0;align-items:center;text-align:center;z-index:1">
 							<span class="f fr falc">
 								<label class="p5" for="buyChestsSliderFidelity">Amount to Buy Slider Fidelity:</label>
-								<select name="buyChestsSliderFidelity" id="buyChestsSliderFidelity"
-									oninput="bc_toggleBuyChestsSliderFidelity(this.value);" style="width:70px">
+								<select name="buyChestsSliderFidelity" id="buyChestsSliderFidelity" oninput="bc_toggleBuyChestsSliderFidelity(this.value);" style="width:70px">
 									<option value="1" selected>1</option>
 									<option value="10">10</option>
 									<option value="25">25</option>
@@ -254,8 +223,7 @@
 								</select>
 							</span>
 							<span class="f fr falc" style="font-size:0.8em">
-								Note: If the fidelity is larger than the maximum<br>amount you can buy - it will use a
-								fidelity of 1.
+								Note: If the fidelity is larger than the maximum<br>amount you can buy - it will use a fidelity of 1.
 							</span>
 						</span>
 					</span>
@@ -265,8 +233,7 @@
 				</span>
 				<span class="f fr w100 p5" style="height:34px;">
 					<span class="f falc fje mr2" style="width:50%;">
-						<input type="button" onClick="bc_pullBuyChestsData()" name="buyChestsPullButton"
-							id="buyChestsPullButton" value="Pull Chest Data" style="min-width:175px">
+						<input type="button" onClick="bc_pullBuyChestsData()" name="buyChestsPullButton" id="buyChestsPullButton" value="Pull Chest Data" style="min-width:175px">
 						<span id="buyChestsPullButtonDisabled" style="font-size:0.9em" hidden>&nbsp;</span>
 					</span>
 				</span>
@@ -288,8 +255,7 @@
 			</div>
 			<!-- END: Buy Chests Tab -->
 			<!-- START: Open Chests Tab -->
-			<input onClick="setHash('openChestsTab')" type="radio" class="tabsRadio" name="serverTabs"
-				id="openChestsTab">
+			<input onClick="setHash('openChestsTab')" type="radio" class="tabsRadio" name="serverTabs" id="openChestsTab">
 			<label for="openChestsTab" class="tabsLabel">Open Chests</label>
 			<div class="tabsContent">
 				<span class="f fr w100 p5">
@@ -302,31 +268,24 @@
 						This page will let you open any of the chests that you currently own.
 						<span class="f fc" style="position:absolute;top:-85px;font-size:0.85em;right:0;z-index:1">
 							<span class="f fr falc">
-								<input type="checkbox" id="openChestsHideBriv" data-ids="[174,175]"
-									onclick="oc_toggleHideOpenChests()"> Hide All Briv Gear Chests
+								<input type="checkbox" id="openChestsHideBriv" data-ids="[174,175]" onclick="oc_toggleHideOpenChests()"> Hide All Briv Gear Chests
 							</span>
 							<span class="f fr falc">
-								<input type="checkbox" id="openChestsHideModron" data-ids="[230]"
-									onclick="oc_toggleHideOpenChests()"> Hide Modron Component Chests
+								<input type="checkbox" id="openChestsHideModron" data-ids="[230]" onclick="oc_toggleHideOpenChests()"> Hide Modron Component Chests
 							</span>
 							<span class="f fr falc">
-								<input type="checkbox" id="openChestsHideElectrum" data-ids="[282]"
-									onclick="oc_toggleHideOpenChests()"> Hide Electrum Chests
+								<input type="checkbox" id="openChestsHideElectrum" data-ids="[282]" onclick="oc_toggleHideOpenChests()"> Hide Electrum Chests
 							</span>
 							<span class="f fr falc">
-								<input type="checkbox" id="openChestsHideBahamut" data-ids="[323]"
-									onclick="oc_toggleHideOpenChests()"> Hide Glory of Bahamut Chests
+								<input type="checkbox" id="openChestsHideBahamut" data-ids="[323]" onclick="oc_toggleHideOpenChests()"> Hide Glory of Bahamut Chests
 							</span>
 							<span class="f fr falc">
-								<input type="checkbox" id="openChestsHideBahamut" data-ids="[&quot;PP&quot;]"
-									onclick="oc_toggleHideOpenChests()"> Hide Platinum Packs
+								<input type="checkbox" id="openChestsHideBahamut" data-ids="[&quot;PP&quot;]" onclick="oc_toggleHideOpenChests()"> Hide Platinum Packs
 							</span>
 							<span class="f fc falc" style="text-align:center">
 								<span class="f fr falc">
-									<label class="p5" for="openChestsSliderFidelity">Open Amount Slider
-										Fidelity:</label>
-									<select name="openChestsSliderFidelity" id="openChestsSliderFidelity"
-										oninput="oc_toggleOpenChestsSliderFidelity(this.value);" style="width:70px">
+									<label class="p5" for="openChestsSliderFidelity">Open Amount Slider Fidelity:</label>
+									<select name="openChestsSliderFidelity" id="openChestsSliderFidelity" oninput="oc_toggleOpenChestsSliderFidelity(this.value);" style="width:70px">
 										<option value="1" selected>1</option>
 										<option value="10">10</option>
 										<option value="25">25</option>
@@ -337,8 +296,7 @@
 									</select>
 								</span>
 								<span class="f fr falc" style="font-size:0.8em;align-items:center;text-align:center">
-									Note: If the fidelity is larger than the maximum<br>amount you can open - it will
-									use a fidelity of 1.
+									Note: If the fidelity is larger than the maximum<br>amount you can open - it will use a fidelity of 1.
 								</span>
 							</span>
 						</span>
@@ -349,8 +307,7 @@
 				</span>
 				<span class="f fr w100 p5" style="height:34px;">
 					<span class="f falc fje mr2" style="width:50%;">
-						<input type="button" onClick="oc_pullOpenChestsData()" name="openChestsPullButton"
-							id="openChestsPullButton" value="Pull Chest Data" style="min-width:175px">
+						<input type="button" onClick="oc_pullOpenChestsData()" name="openChestsPullButton" id="openChestsPullButton" value="Pull Chest Data" style="min-width:175px">
 						<span id="openChestsPullButtonDisabled" style="font-size:0.9em" hidden>&nbsp;</span>
 					</span>
 				</span>
@@ -385,19 +342,14 @@
 						This page will let you apply blacksmith contracts to champions you own. There are three methods.
 						<span class="bscMethodGrid">
 							<span style="font-size:1.2em"><strong>General</strong></span>
-							<span>This will apply a chosen amount of a chosen type of blacksmiths to a chosen champion.
-								This is how it works in-game.</span>
+							<span>This will apply a chosen amount of a chosen type of blacksmiths to a chosen champion. This is how it works in-game.</span>
 							<span style="font-size:1.2em"><strong>Average</strong></span>
-							<span>This will only apply enough blacksmiths to reach the chosen average iLvl value to the
-								chosen champion.</span>
+							<span>This will only apply enough blacksmiths to reach the chosen average iLvl value to the chosen champion.</span>
 							<span style="font-size:1.2em"><strong>Specific</strong></span>
-							<span>This will only apply enough blacksmiths to reach a specific iLvl on a specific item
-								slot of the chosen champion. This method is slow.</span>
+							<span>This will only apply enough blacksmiths to reach a specific iLvl on a specific item slot of the chosen champion. This method is slow.</span>
 						</span>
 						<span style="color:var(--TangerineYellow)">
-							Please be <strong>very</strong> careful with this tab. I don't want to read any complaints
-							about you spending ilvls where you didn't want to because you chose the wrong settings.
-							You'll only have yourself to blame.
+							Please be <strong>very</strong> careful with this tab. I don't want to read any complaints about you spending ilvls where you didn't want to because you chose the wrong settings. You'll only have yourself to blame.
 						</span>
 					</span>
 				</span>
@@ -406,8 +358,7 @@
 				</span>
 				<span class="f fr w100 p5" style="height:34px;">
 					<span class="f falc fje mr2" style="width:50%;">
-						<input type="button" onClick="bs_pullBSCData()" name="bscPullButton" id="bscPullButton"
-							value="Pull BSC Data" style="min-width:175px">
+						<input type="button" onClick="bs_pullBSCData()" name="bscPullButton" id="bscPullButton" value="Pull BSC Data" style="min-width:175px">
 						<span id="bscPullButtonDisabled" style="font-size:0.9em" hidden>&nbsp;</span>
 					</span>
 				</span>
@@ -442,8 +393,7 @@
 				</span>
 				<span class="f fr w100 p5">
 					<span class="f fc fals fjs ml2" style="width:100%;position:relative">
-						<p>This page will let you distill non-speed potions while leaving specific amounts of each
-							potion size, and brew potions.</p>
+						<p>This page will let you distill non-speed potions while leaving specific amounts of each potion size, and brew potions.</p>
 						<span class="f fc" style="position:absolute;top:-80px;right:0;z-index:1">
 							<span class="f fr falc">
 								<input type="checkbox" id="pm_include_polish" data-type="polish"
@@ -461,8 +411,7 @@
 				</span>
 				<span class="f fr w100 p5" style="height:34px;">
 					<span class="f falc fje mr2" style="width:50%;">
-						<input type="button" onClick="pm_pullPotionData()" name="potionPullButton" id="potionPullButton"
-							value="Pull Potion Data" style="min-width:175px">
+						<input type="button" onClick="pm_pullPotionData()" name="potionPullButton" id="potionPullButton" value="Pull Potion Data" style="min-width:175px">
 						<span id="potionPullButtonDisabled" style="font-size:0.9em" hidden>&nbsp;</span>
 					</span>
 				</span>
@@ -494,9 +443,7 @@
 				</span>
 				<span class="f fr w100 p5">
 					<span class="f falc fjs ml2" style="width:100%">
-						This page will provide information about your current trials as well as let you join or
-						create a
-						lobby as well as choose a champion and claim rewards.
+						This page will provide information about your current trials as well as let you join or create a lobby as well as choose a champion and claim rewards.
 					</span>
 				</span>
 				<span class="f fr w100 p5">
@@ -504,8 +451,7 @@
 				</span>
 				<span class="f fr w100 p5" style="height:34px;">
 					<span class="f falc fje mr2" style="width:50%;">
-						<input type="button" onClick="tm_pullData()" name="trialsPullButton" id="trialsPullButton"
-							value="Pull Trials Data" style="min-width:175px">
+						<input type="button" onClick="tm_pullData()" name="trialsPullButton" id="trialsPullButton" value="Pull Trials Data" style="min-width:175px">
 						<span id="trialsPullButtonDisabled" style="font-size:0.9em" hidden>&nbsp;</span>
 					</span>
 				</span>
@@ -527,8 +473,7 @@
 			</div>
 			<!-- END: Trials Calculator Tab -->
 			<!-- START: Event Tiers Tab -->
-			<input onClick="setHash('eventTiersTab')" type="radio" class="tabsRadio" name="serverTabs"
-				id="eventTiersTab">
+			<input onClick="setHash('eventTiersTab')" type="radio" class="tabsRadio" name="serverTabs" id="eventTiersTab">
 			<label for="eventTiersTab" class="tabsLabel">Event Tiers</label>
 			<div class="tabsContent">
 				<span class="f fr w100 p5">
@@ -547,8 +492,7 @@
 				</span>
 				<span class="f fr w100 p5" style="height:34px;">
 					<span class="f falc fje mr2" style="width:50%;">
-						<input type="button" onClick="et_pullEventTiersData()" name="eventTiersPullButton"
-							id="eventTiersPullButton" value="Pull EventTiers Data" style="min-width:175px">
+						<input type="button" onClick="et_pullEventTiersData()" name="eventTiersPullButton" id="eventTiersPullButton" value="Pull EventTiers Data" style="min-width:175px">
 						<span id="eventTiersPullButtonDisabled" style="font-size:0.9em" hidden>&nbsp;</span>
 					</span>
 				</span>
@@ -556,21 +500,16 @@
 					&nbsp;
 					<span class="f fc" style="position:absolute;top:-30px;right:20px;width:fit-content">
 						<span class="f fr falc fjc">
-							<input type="checkbox" id="eventTiersHideTier4" onclick="et_toggleHideTier4()"> Hide
-							Tier 4
-							Champions
+							<input type="checkbox" id="eventTiersHideTier4" onclick="et_toggleHideTier4()"> Hide Tier 4 Champions
 						</span>
-						<span class="f fr falc fjc" style="display:none;margin-top:2px" name="eventTiersSortHolder"
-							id="eventTiersSortHolder">
-							Sort: <select name="eventTiersSort" id="eventTiersSort"
-								oninput="et_changeOrder(this.value);" style="width:150px;margin-left:5px">
+						<span class="f fr falc fjc" style="display:none;margin-top:2px" name="eventTiersSortHolder" id="eventTiersSortHolder">
+							Sort: <select name="eventTiersSort" id="eventTiersSort" oninput="et_changeOrder(this.value);" style="width:150px;margin-left:5px">
 								<option value="event" selected>Event</option>
 								<option value="name">Champion Name</option>
 								<option value="id">Champion ID</option>
 							</select>
 						</span>
-						<span class="f ft falc fjc" style="display:none;margin-top:5px" name="eventTiersHideTier4Amount"
-							id="eventTiersHideTier4Amount">
+						<span class="f ft falc fjc" style="display:none;margin-top:5px" name="eventTiersHideTier4Amount" id="eventTiersHideTier4Amount">
 							&nbsp;
 						</span>
 					</span>
@@ -587,8 +526,7 @@
 			</div>
 			<!-- END: Event Tiers Tab -->
 			<!-- START: iLvl Report Tab -->
-			<input onClick="setHash('ilvlreportTab')" type="radio" class="tabsRadio" name="serverTabs"
-				id="ilvlreportTab">
+			<input onClick="setHash('ilvlreportTab')" type="radio" class="tabsRadio" name="serverTabs" id="ilvlreportTab">
 			<label for="ilvlreportTab" class="tabsLabel">iLvl Report</label>
 			<div class="tabsContent">
 				<span class="f fr w100 p5">
@@ -606,8 +544,7 @@
 				</span>
 				<span class="f fr w100 p5" style="height:34px;">
 					<span class="f falc fje mr2" style="width:50%;">
-						<input type="button" onClick="ir_pulliLvlReportData()" name="ilvlreportPullButton"
-							id="ilvlreportPullButton" value="Pull iLvl Report Data" style="min-width:175px">
+						<input type="button" onClick="ir_pulliLvlReportData()" name="ilvlreportPullButton" id="ilvlreportPullButton" value="Pull iLvl Report Data" style="min-width:175px">
 						<span id="ilvlreportPullButtonDisabled" style="font-size:0.9em" hidden>&nbsp;</span>
 					</span>
 				</span>
@@ -636,9 +573,7 @@
 				</span>
 				<span class="f fr w100 p5">
 					<span class="f falc fjs ml2" style="width:100%">
-						This page will tell you how many shinies you can get on-average from your current amount of
-						event tokens - as well as what you could get if you used every single one of your bounty
-						contracts.
+						This page will tell you how many shinies you can get on-average from your current amount of event tokens - as well as what you could get if you used every single one of your bounty contracts.
 					</span>
 				</span>
 				<span class="f fr w100 p5">
@@ -646,8 +581,7 @@
 				</span>
 				<span class="f fr w100 p5" style="height:34px;">
 					<span class="f falc fje mr2" style="width:50%;">
-						<input type="button" onClick="sc_pullShiniesData()" name="shiniesPullButton"
-							id="shiniesPullButton" value="Pull Shinies Data" style="min-width:175px">
+						<input type="button" onClick="sc_pullShiniesData()" name="shiniesPullButton" id="shiniesPullButton" value="Pull Shinies Data" style="min-width:175px">
 						<span id="shiniesPullButtonDisabled" style="font-size:0.9em" hidden>&nbsp;</span>
 					</span>
 				</span>
@@ -676,9 +610,7 @@
 				</span>
 				<span class="f fr w100 p5">
 					<span class="f falc fjs ml2" style="width:100%">
-						This page will tell you what all your adventuring parties are up to - as well as providing
-						the
-						option to end them.
+						This page will tell you what all your adventuring parties are up to - as well as providing the option to end them.
 					</span>
 				</span>
 				<span class="f fr w100 p5">
@@ -686,8 +618,7 @@
 				</span>
 				<span class="f fr w100 p5" style="height:34px;">
 					<span class="f falc fje mr2" style="width:50%;">
-						<input type="button" onClick="pm_pullPartyData()" name="partyPullButton" id="partyPullButton"
-							value="Pull Party Data" style="min-width:175px">
+						<input type="button" onClick="pm_pullPartyData()" name="partyPullButton" id="partyPullButton" value="Pull Party Data" style="min-width:175px">
 						<span id="partyPullButtonDisabled" style="font-size:0.9em" hidden>&nbsp;</span>
 					</span>
 				</span>
@@ -719,16 +650,13 @@
 						<p>This page will let you dismantle champions if a dismantle period is running.</p>
 						<span class="f fc" style="position:absolute;top:-80px;right:0;z-index:1">
 							<span class="f fr falc">
-								<input type="checkbox" id="dismantleHideOption6Legs" data-type="6legs"
-									onclick="dc_toggleDismantleHideOptions(this)"> Hide Has 6 Legendaries
+								<input type="checkbox" id="dismantleHideOption6Legs" data-type="6legs" onclick="dc_toggleDismantleHideOptions(this)"> Hide Has 6 Legendaries
 							</span>
 							<span class="f fr falc">
-								<input type="checkbox" id="dismantleHideOptionReforges" data-type="reforges"
-									onclick="dc_toggleDismantleHideOptions(this)"> Hide Has Reforged
+								<input type="checkbox" id="dismantleHideOptionReforges" data-type="reforges" onclick="dc_toggleDismantleHideOptions(this)"> Hide Has Reforged
 							</span>
 							<span class="f fr falc">
-								<input type="checkbox" id="dismantleHideOption1sonly" data-type="1sonly"
-									onclick="dc_toggleDismantleHideOptions(this)"> Hide Only Has Level 1s
+								<input type="checkbox" id="dismantleHideOption1sonly" data-type="1sonly" onclick="dc_toggleDismantleHideOptions(this)"> Hide Only Has Level 1s
 							</span>
 							<span class="f fc falc" style="text-align:center">
 								<span class="f fr falc" style="font-size:0.8em;align-items:center;text-align:center">
@@ -743,8 +671,7 @@
 				</span>
 				<span class="f fr w100 p5" style="height:34px;">
 					<span class="f falc fje mr2" style="width:50%;">
-						<input type="button" onClick="dc_pullData()" name="dismantlePullButton" id="dismantlePullButton"
-							value="Pull Dismantle Data" style="min-width:175px">
+						<input type="button" onClick="dc_pullData()" name="dismantlePullButton" id="dismantlePullButton" value="Pull Dismantle Data" style="min-width:175px">
 						<span id="dismantlePullButtonDisabled" style="font-size:0.9em" hidden>&nbsp;</span>
 					</span>
 				</span>
@@ -766,8 +693,7 @@
 			</div>
 			<!-- END: Dismantle Champions Tab -->
 			<!-- START: Celebration Codes Tab -->
-			<input onClick="setHash('celebrationsTab')" type="radio" class="tabsRadio" name="serverTabs"
-				id="celebrationsTab">
+			<input onClick="setHash('celebrationsTab')" type="radio" class="tabsRadio" name="serverTabs" id="celebrationsTab">
 			<label for="celebrationsTab" class="tabsLabel">Celebrations</label>
 			<div class="tabsContent">
 				<span class="f fr w100 p5">
@@ -778,8 +704,7 @@
 				<span class="f fr w100 p5">
 					<span class="f fc fals fjs ml2" style="width:100%">
 						<p>This page will let you claim celebration codes for the current day.</p>
-						<p><em>Note: This will not tell you what's in any of the rewards - so if you care about that -
-								redeem the combinations via some other tool that will.</em></p>
+						<p><em>Note: This will not tell you what's in any of the rewards - so if you care about that - redeem the combinations via some other tool that will.</em></p>
 					</span>
 				</span>
 				<span class="f fr w100 p5">
@@ -787,8 +712,7 @@
 				</span>
 				<span class="f fr w100 p5" style="height:34px;">
 					<span class="f falc fje mr2" style="width:50%;">
-						<input type="button" onClick="cc_pullCelebrationsData()" name="celebrationsPullButton"
-							id="celebrationsPullButton" value="Pull Celebrations Data" style="min-width:175px">
+						<input type="button" onClick="cc_pullCelebrationsData()" name="celebrationsPullButton" id="celebrationsPullButton" value="Pull Celebrations Data" style="min-width:175px">
 						<span id="celebrationsPullButtonDisabled" style="font-size:0.9em" hidden>&nbsp;</span>
 					</span>
 				</span>
@@ -820,8 +744,7 @@
 				</span>
 				<span class="f fr w100 p5">
 					<span class="f falc fjs ml2" style="width:100%">
-						This page will just tell you which patron Aeon is currently on - as well as when she'll switch
-						and what patron she'll switch to.
+						This page will just tell you which patron Aeon is currently on - as well as when she'll switch and what patron she'll switch to.
 					</span>
 				</span>
 				<span class="f fr w100 p5">
@@ -829,8 +752,7 @@
 				</span>
 				<span class="f fr w100 p5" style="height:34px;">
 					<span class="f falc fje mr2" style="width:50%;">
-						<input type="button" onClick="ad_pullAeonData()" name="aeonPullButton" id="aeonPullButton"
-							value="Pull Aeon Data" style="min-width:175px">
+						<input type="button" onClick="ad_pullAeonData()" name="aeonPullButton" id="aeonPullButton" value="Pull Aeon Data" style="min-width:175px">
 						<span id="aeonPullButtonDisabled" style="font-size:0.9em" hidden>&nbsp;</span>
 					</span>
 				</span>
@@ -849,8 +771,7 @@
 			</div>
 			<!-- END: Aeon Tab -->
 			<!-- START: ServerStatus Calculator Tab -->
-			<input onClick="setHash('serverStatusTab')" type="radio" class="tabsRadio" name="serverTabs"
-				id="serverStatusTab">
+			<input onClick="setHash('serverStatusTab')" type="radio" class="tabsRadio" name="serverTabs" id="serverStatusTab">
 			<label for="serverStatusTab" class="tabsLabel">Server Status</label>
 			<div class="tabsContent">
 				<span class="f fr w100 p5">
@@ -869,10 +790,8 @@
 				</span>
 				<span class="f fr w100 p5" style="height:34px;">
 					<span class="f falc fje mr2" style="width:50%;">
-						<input type="button" onClick="ss_pullServerStatusData()" name="checkServerStatusButton"
-							id="checkServerStatusButton" value="Check Server Status" style="min-width:175px">
-						<span id="checkServerStatusButtonDisabled" class="f fjc" style="font-size:0.9em"
-							hidden>&nbsp;</span>
+						<input type="button" onClick="ss_pullServerStatusData()" name="checkServerStatusButton" id="checkServerStatusButton" value="Check Server Status" style="min-width:175px">
+						<span id="checkServerStatusButtonDisabled" class="f fjc" style="font-size:0.9em" hidden>&nbsp;</span>
 					</span>
 				</span>
 				<span class="f fr w100 p5">
@@ -893,25 +812,24 @@
 	</div>
 
 	<script type="text/javascript" src="scripts/util_campaigns.js?vc=1.006"></script>
-	<script type="text/javascript" src="scripts/util_buffs.js?vb=2.000"></script>
-	<script type="text/javascript" src="scripts/tab_deleteFormations.js?vdf=1.016"></script>
-	<script type="text/javascript" src="scripts/tab_buyFeats.js?vbf=1.012"></script>
-	<script type="text/javascript" src="scripts/tab_buyChests.js?vbc=1.019"></script>
-	<script type="text/javascript" src="scripts/tab_openChests.js?voc=1.031"></script>
-	<script type="text/javascript" src="scripts/tab_blacksmiths.js?vbs=1.015"></script>
-	<script type="text/javascript" src="scripts/tab_trialsManager.js?vtm=1.013"></script>
-	<script type="text/javascript" src="scripts/tab_eventTiers.js?vet=1.016"></script>
-	<script type="text/javascript" src="scripts/tab_ilvlReport.js?vir=1.004"></script>
-	<script type="text/javascript" src="scripts/tab_shiniesCalculator.js?vsc=1.006"></script>
-	<script type="text/javascript" src="scripts/tab_partyManager.js?vpm=1.010"></script>
-	<script type="text/javascript" src="scripts/tab_dismantleChampions.js?vdc=1.006"></script>
-	<script type="text/javascript" src="scripts/tab_celebrationCodes.js?vcc=1.005"></script>
-	<script type="text/javascript" src="scripts/tab_aeonData.js?vad=1.007"></script>
+	<script type="text/javascript" src="scripts/util_buffs.js?vb=2.001"></script>
+	<script type="text/javascript" src="scripts/tab_deleteFormations.js?vdf=1.017"></script>
+	<script type="text/javascript" src="scripts/tab_buyFeats.js?vbf=1.013"></script>
+	<script type="text/javascript" src="scripts/tab_buyChests.js?vbc=1.020"></script>
+	<script type="text/javascript" src="scripts/tab_openChests.js?voc=1.032"></script>
+	<script type="text/javascript" src="scripts/tab_blacksmiths.js?vbs=1.016"></script>
+	<script type="text/javascript" src="scripts/tab_trialsManager.js?vtm=1.014"></script>
+	<script type="text/javascript" src="scripts/tab_eventTiers.js?vet=1.017"></script>
+	<script type="text/javascript" src="scripts/tab_ilvlReport.js?vir=1.005"></script>
+	<script type="text/javascript" src="scripts/tab_shiniesCalculator.js?vsc=1.007"></script>
+	<script type="text/javascript" src="scripts/tab_partyManager.js?vpm=1.011"></script>
+	<script type="text/javascript" src="scripts/tab_dismantleChampions.js?vdc=1.007"></script>
+	<script type="text/javascript" src="scripts/tab_celebrationCodes.js?vcc=1.006"></script>
+	<script type="text/javascript" src="scripts/tab_aeonData.js?vad=1.008"></script>
 	<script type="text/javascript" src="scripts/tab_serverStatus.js?vss=2.006"></script>
 	<script type="text/javascript" src="scripts/tab_potionManager.js?vpot=1.000"></script>
-	<script type="text/javascript" src="scripts/asyncIntervals.js?vai=1.001"></script>
+	<script type="text/javascript" src="scripts/asyncIntervals.js?vai=1.002"></script>
 	<script type="text/javascript" src="scripts/serverCalls.js?vs=3.022"></script>
-	<script type="text/javascript" src="scripts/main.js?v=4.031"></script>
+	<script type="text/javascript" src="scripts/main.js?v=4.032"></script>
 </body>
-
 </html>
